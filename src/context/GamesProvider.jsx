@@ -7,6 +7,7 @@ const GameProvider = ({ children }) => {
 
 
    const [datos, setDatos] = useState([]);
+   const [id, setId] = useState(0);
 
    const consultaApi = async () => {
 
@@ -28,7 +29,8 @@ const GameProvider = ({ children }) => {
    return (
       <GameContext.Provider
          value={{
-            datos
+            datos,
+            setId
          }}
       >
          {children}
