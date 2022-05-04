@@ -14,17 +14,21 @@ const personajes = () => {
 
 
    return (
-      <div className="redd">
+      <div className="container">
          {
             datos.map(dat => (
-               <div key={dat.id} className=" characters">
+               <div key={dat.id} className=" contaner__cart">
 
-                  <img src={dat.images.md} />
+                  <img className="container__img" src={dat.images.md} alt={dat.name} />
 
-                  <div className="peronaje">
-                     <h1> {dat.name} </h1>
-                     <p> {dat.appearance.gender} --{dat.biography.alignment} -- {dat.appearance.race}</p>
-                     <button onClick={() => informacion(dat.id)}>Ver Mas</button>
+                  <div className="container__peronaje">
+                     <h1 container__h1> {dat.name} </h1>
+                     <p className="container__data">
+                        <span className="container__data__texto">{dat.appearance.gender}</span>
+                        <span className="container__data__texto">{dat.biography.alignment}</span>
+                        <span className="container__data__texto">{dat.appearance.race}</span>
+                     </p>
+                     <button className="container__button" onClick={() => informacion(dat.id)}>Ver Mas  </button>
                   </div>
 
                </div>

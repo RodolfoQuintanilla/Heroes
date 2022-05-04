@@ -1,20 +1,108 @@
-* {
-   box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:wght@200;300;400&display=swap');
+
+:root {
+   --fondo: #321730;
+   --nav: #d9005b;
+   --letras: rgb(241, 240, 240);
 }
 
 body {
-   background-color: #3333;
+   background-color: var(--fondo);
+}
+
+.navbar {
+   display: flex;
+   box-sizing: border-box;
+   height: 50px;
+   width: auto;
+   background-color: var(--nav);
+   align-items: center;
 }
 
 
-.redd {
+
+.navbar__lista {
+   display: flex;
+   gap: 1em;
+   list-style-type: none;
+}
+
+.navbar__link {
+   text-decoration: none;
+   color: var(--letras);
+}
+
+.navbar__logo {
+   padding-left: 2em;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   gap: 1rem;
+   gap: 2rem;
+   margin-top: 3rem;
 }
 
-.personaje {
-   display: inline;
+.contaner__cart {
+   background-color: #333;
+   border-radius: 10px;
+   padding: 10px;
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.668);
+}
+
+.container__img {
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   margin-bottom: 0;
+}
+
+.container__peronaje {
+   text-align: center;
+   color: #fff;
+}
+
+.container__h1 {
+   font-family: 'Nunito', sans-serif;
+}
+
+.container__data {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.container__data__texto {
+   border: 1px solid var(--nav);
+   background: var(--fondo);
+   height: 20px;
+   width: 100%;
+   padding: 1rem;
+   align-items: center;
+}
+
+.container__button {
+   color: #fff !important;
+   font-size: 20px;
+   font-weight: 500;
+   padding: 0.5em 1.2em;
+   background: var(--nav);
+   border: 2px solid;
+   border-color: var(--nav);
+   position: relative;
+   border-radius: 10px;
+}
+
+
+.container__button:hover:before {
+   width: 100%;
+}
+
+.container__button:hover {
+   box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+   outline-color: rgba(49, 138, 172, 0);
+   outline-offset: 80px;
+   text-shadow: 1px 1px 6px #fff;
+   border-radius: 10px;
 }

@@ -3,11 +3,22 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
    return (
-      <ul >
-         <li><Link to="/">Inico</Link></li>
-         <li><Link to="/hero">Heroes</Link></li>
-      </ul>
+      <nav className="navbar">
+
+         <div className="navbar__logo">
+            Rorro App
+         </div>
+
+         <div>
+            <ul className='navbar__lista'>
+               <li ><Link className="navbar__link" to="/">Inico</Link></li>
+               <li ><Link className="navbar__link" to="/hero">Heroes</Link></li>
+            </ul>
+         </div>
+
+      </nav>
+
    );
 };
 
-export default Nav; Nav
+export default Nav; 
