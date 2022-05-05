@@ -13,6 +13,7 @@ const Nav = () => {
             <ul className='navbar__lista'>
                <li ><Link className="navbar__link" to="/">Inico</Link></li>
                <li ><Link className="navbar__link" to="/hero">Heroes</Link></li>
+
             </ul>
          </div>
 

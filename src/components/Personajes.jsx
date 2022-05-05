@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, Routes } from 'react-router-dom';
 import useGame from '../hooks/useGame'
 import Perfil from './Perfil';
 
@@ -28,7 +29,10 @@ const personajes = () => {
                         <span className="container__data__texto">{dat.biography.alignment}</span>
                         <span className="container__data__texto">{dat.appearance.race}</span>
                      </p>
-                     <button className="container__button" onClick={() => informacion(dat.id)}>Ver Mas  </button>
+                     <button className="container__button" onClick={() => informacion(dat.id)}>
+
+                        <Link to="/perfil">Ver Mas</Link>
+                     </button>
                   </div>
 
                </div>
